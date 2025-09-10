@@ -19,9 +19,7 @@
 
 {% if not news_list %}
 <p>Belum ada data berita pada football news.</p>
-{% else %}
-
-{% for news in news_list %}
+{% else %} {% for news in news_list %}
 <div>
   <h2><a href="{% url 'main:show_news' news.id %}">{{ news.title }}</a></h2>
 
