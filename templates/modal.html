@@ -82,7 +82,7 @@
         modal.classList.add('hidden');
       }, 150); 
   }
-  
+
   async function addNewsEntry() {
     await fetch("{% url 'main:add_news_entry_ajax' %}", {
       method: "POST",
@@ -100,4 +100,9 @@
 
     return false;
   }
+
+    document.getElementById("newsForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    addNewsEntry();
+    })
 </script>
